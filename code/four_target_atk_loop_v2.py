@@ -89,7 +89,7 @@ class DEVSet(Dataset):
         # img_gs = cv2.blur(img_gs,(21,21))
         img_gs = Image.fromarray(cv2.cvtColor(img_gs,cv2.COLOR_BGR2RGB))
 
-        mask_path = '/home/ly/1project/安全AI第二期/data/images_100_mask'
+        mask_path = '...' #需要自己修改路径
         mask = cv2.imread(os.path.join(mask_path,image_name))
         mask = mask[:,:,0]/255
 
@@ -216,7 +216,7 @@ class MASKSet(Dataset):
                 Tmask_Class_2 = str(self.TmaskClass_list[2].item())
                 Tmask_Class_3 = str(self.TmaskClass_list[3].item())
                 Tmask_Class_4 = str(self.TmaskClass_list[4].item())
-                root_dir = '/home/ly/1project/安全AI第二期/data/other/imagenet_val_1000'
+                root_dir = '...' #需要自己修改这个路径
                 Tmask_path_1 = os.path.join(root_dir,Tmask_Class_1,Tmask_name_1)
                 Tmask_path_2 = os.path.join(root_dir,Tmask_Class_2,Tmask_name_2)
                 Tmask_path_3 = os.path.join(root_dir,Tmask_Class_3,Tmask_name_3)
@@ -324,7 +324,8 @@ def PGD_white(input,models,tar_lab,true_label,mean,std,img_name=None,yes=0,img_b
               TmaskId_list=None,TmaskClass_list = None,UmaskClass_list =None,UmaskId_list = None,umi=None):
 
     # 设置一个imagenet的csv文件，每个原始图片的，或者是1216的正常的以后的
-    target_list_dir = os.listdir('/home/ly/1project/安全AI第二期/data/other/imagenet_val_1000') #得到所有的tar的类
+    #  需要自己修改下面这个路径
+    target_list_dir = os.listdir('....') #得到所有的tar的类
     bs =args.in_bs #mask的batch_size是多少
     mn = 5 # 使用的模型的个数
     Tmax_gap = -10
