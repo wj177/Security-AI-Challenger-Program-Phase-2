@@ -9,10 +9,6 @@ from torchvision import transforms
 from torch.utils.data import Dataset,DataLoader
 from PIL import Image
 
-
-# csv_path = '/home/ly/1project/安全AI第二期/data/XPZ/18号/4full/tar_start.csv'
-# csv_path = '/home/ly/1project/安全AI第二期/data/tar_start.csv'
-# csv_path = '/home/ly/1project/安全AI第二期/data/XPZ/22号/单个最好的/tar_start.csv'
 csv_path = 'path to csv文件'#该文件是使用target_atk_loop得到的csv文件
 dev_df = pd.read_csv(csv_path)
 img_root_dir = 'path to 1216张图像的地址' #需要攻击的1216张图像的地址
