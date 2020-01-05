@@ -195,7 +195,7 @@ def PGD_white(input,models,tar_lab,true_label,mean,std,img_name=None,yes=0,img_b
     # 设置一个imagenet的csv文件，每个原始图片的，或者是1216的正常的以后的
     # 文件结构是怎么样的呢？传入一个图片名，然后呢得到该名字的csv文件，该文件中有每个变化时所对应的的prediction
     # imgname.csv -MaskId,trans,pred,TargetClass,TrueLabel
-    target_list_dir = os.listdir('/home/ly/1project/安全AI第二期/data/other/imagenet_val_1000') #得到所有的tar的类
+    target_list_dir = os.listdir('...') #得到所有的tar的类 需要自己修改路径
     bs =args.in_bs #mask的batch_size是多少
     mn = 5 # 使用的模型的个数
     Tmax_gap = -10
